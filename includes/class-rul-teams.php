@@ -15,10 +15,6 @@ class RUL_Teams {
         add_menu_page('RUL Teams', 'RUL Teams', 'manage_options', 'rul-teams', array($this, 'team_member_list_page'));
     }
 
-    public function team_member_list_page() {
-        include plugin_dir_path(__FILE__) . '../templates/team-member-list.php';
-    }
-
     public function ajax_delete_team_member() {
         if (isset($_POST['member_id'])) {
             $member_id = intval($_POST['member_id']);
