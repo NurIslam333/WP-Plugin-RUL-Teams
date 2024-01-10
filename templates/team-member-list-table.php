@@ -12,8 +12,9 @@ class Team_Member_List_Table extends WP_List_Table {
         return array(
             'cb'        => '<input type="checkbox" />',
             'name'      => 'Name',
+            'position'  => 'Designation',
+            'id'        => 'ID',
             'email'     => 'Email',
-            'position'  => 'Position',
             'actions'   => 'Actions',
         );
     }
@@ -61,8 +62,9 @@ class Team_Member_List_Table extends WP_List_Table {
     public function get_sortable_columns() {
         return array(
             'name'     => array('name', false),
+            'position'    => array('position', false),
+            'id' => array('id', false),
             'email'    => array('email', false),
-            'position' => array('position', false),
         );
     }
 }
