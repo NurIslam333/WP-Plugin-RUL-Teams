@@ -16,7 +16,7 @@ class RUL_Teams {
     }
 
     public function team_member_list_page() {
-        include plugin_dir_path(__FILE__) . 'templates/team-member-list.php';
+        include plugin_dir_path(__FILE__) . '../templates/team-member-list.php';
     }
 
     public function ajax_delete_team_member() {
@@ -35,8 +35,8 @@ class RUL_Teams {
     }
 
     public function enqueue_scripts() {
-        wp_enqueue_style('rul-teams-style', plugin_dir_url(__FILE__) . 'css/style.css');
-        wp_enqueue_script('rul-teams-script', plugin_dir_url(__FILE__) . 'js/script.js', array('jquery'), '', true);
+        wp_enqueue_style('rul-teams-style', plugin_dir_url(__FILE__) . '../css/style.css');
+        wp_enqueue_script('rul-teams-script', plugin_dir_url(__FILE__) . '../js/script.js', array('jquery'), '', true);
         wp_localize_script('rul-teams-script', 'rul_teams_vars', array(
             'ajax_url' => admin_url('admin-ajax.php'),
         ));
@@ -47,7 +47,7 @@ class RUL_Teams {
             $this->add_team_member();
         }
     
-        include plugin_dir_path(__FILE__) . 'templates/team-member-list.php';
+        include plugin_dir_path(__FILE__) . '../templates/team-member-list.php';
     }
     
     private function add_team_member() {
